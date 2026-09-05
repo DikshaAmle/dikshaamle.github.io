@@ -32,7 +32,10 @@ document.querySelectorAll('section > *:not(.section-title)').forEach(el => {
 
 // Download Resume Function
 function downloadResume() {
-    alert('Resume download feature will be enabled once you upload your resume file.\n\nTo complete setup:\n1. Upload resume.pdf to your GitHub repo\n2. Update the downloadResume() function\n\nFor now, you can download from: https://www.linkedin.com/in/diksha-amle-9a21382a8/');
+  const link = document.createElement('a');
+  link.href = 'resume.pdf';
+  link.download = 'Diksha_Amle_Resume.pdf';
+  link.click();
 }
 
 // Active navigation link
