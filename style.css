@@ -828,3 +828,66 @@ footer {
         display: none;
     }
 }
+/* Profile Image Styling */
+.profile-image-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-purple);
+    box-shadow: 0 0 30px rgba(167, 139, 250, 0.6);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(167, 139, 250, 0.8), 
+                0 0 30px rgba(6, 182, 212, 0.6);
+}
+
+.about-profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    border: 3px solid var(--accent-purple);
+    box-shadow: 0 0 30px rgba(167, 139, 250, 0.6);
+    object-fit: cover;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.about-profile-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px rgba(167, 139, 250, 0.8);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-profile-image {
+        width: 200px;
+        height: 200px;
+    }
+}
